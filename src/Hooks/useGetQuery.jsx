@@ -3,28 +3,25 @@ import React, { useEffect, useState } from "react";
 import WeatherAPI from "../API/WeatherAPI";
 
 const useGetQuery = ({ city, searched }) => {
-  const [data, setData] = useState();
+  const [data, setData] = useState("");
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState();
 
   useEffect(() => {
-    setLoading(false);
     searched &&
       axios
-        .get(
-          `${WeatherAPI.baseUrl}=${WeatherAPI.apiKey}&q=${
-            city === "" ? "Ujjain" : city
-          }&aqi=no`,
-        )
+        .get(`${WeatherAPI.baseUrl}=${WeatherAPI.apiKey}&q=${city}&aqi=no`)
         .then((res) => {
-          console.log(res.data);
           setData(res.data);
-          setLoading(true);
+          setLoading(false);
         })
         .catch((err) => {
-          console.log("error");
+          console.log(err.response.data.error.message);
+          setError(err.response.data.error.message);
         });
   }, [city, searched]);
-  return { data, loading };
+
+  return { data, loading, error };
 };
 
 export default useGetQuery;
