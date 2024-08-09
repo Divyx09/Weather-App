@@ -5,7 +5,7 @@ const Loader = () => {
   return (
     <div className='d-flex justify-content-center align-items-center w-100 mt-5'>
       <div className='loading-bg'>
-        <img src={loader} alt='Loader' height={100} width={100} />
+        <img src={loader} alt='Loader' height={80} width={80} />
       </div>
     </div>
   );

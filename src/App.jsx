@@ -24,7 +24,7 @@ const App = () => {
   }, []);
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className='container mt-5'>
         <div className='d-flex'>
           <Input

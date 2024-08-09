@@ -10,8 +10,6 @@ body {
 .weather-card {
   border-color: #0000003b !important;
   background-color: rgba(0, 0, 0, 0.16);
-  // box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.178),
-  //   inset 3px 3px 4px rgba(0, 0, 0, 0.178);
   max-width: 700px;
   min-height: 280px;
   border-radius: 10px;
@@ -23,29 +21,24 @@ body {
     .weather-card-image-tmp {
       h1 {
         font-size: 5rem;
-        // color: rgba(0, 0, 0, 0.664);
         color: $text-color;
         font-weight: 500;
       }
       h6 {
         font-size: 1.2rem;
-        // color: rgba(0, 0, 0, 0.5);
         color: rgba(255, 255, 255, 0.623);
       }
     }
     .weather-card-side {
       padding: 0;
       width: 45%;
-      color: black;
+      color: #ffffffdc;
       font-weight: 600;
       font-size: 16px;
       font-weight: 800;
-      border-radius: 10px;
-      box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.178),
-        inset 1px 1px 4px rgba(0, 0, 0, 0.178);
-
       border: 2px solid rgba(0, 0, 0, 0.041);
       background-color: rgba(255, 255, 255, 0.185);
+      border-radius: 10px;
       span {
         padding: 10px 0;
         border-color: rgba(0, 0, 0, 0.385) !important;

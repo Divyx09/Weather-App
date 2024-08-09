@@ -1,9 +1,5 @@
 .loading-bg {
-  //   background-color: rgb(255, 255, 255);
-  background: url("../images/cloud.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 4px solid rgb(221 221 221);
-  padding: 20px;
-  border-radius: 50%;
+  img {
+    filter: brightness(650%);
+  }
 }

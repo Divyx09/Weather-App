@@ -4,6 +4,7 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.css";
 import "./assets/SCSS/weatherCard.scss";
 import "./assets/SCSS/loader.scss";
+import "./assets/SCSS/header.scss";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
