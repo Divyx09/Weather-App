@@ -4,13 +4,13 @@ import demo from "../assets/demo.png";
 const WeatherCard = ({ weatherData }) => {
   const { location, current } = weatherData;
   return (
-    <div className='border  mt-4 weather-card w-100'>
-      <div className=' m-4 rounded weather-card-content '>
-        <h6 className='text-secondary'>CURRENT WEATHER</h6>
+    <div className='border  mt-4 weather-card w-100 '>
+      <div className=' m-4 mb-2 rounded weather-card-content '>
+        <h6 className=''>CURRENT WEATHER</h6>
         <hr />
-        <div className='d-flex justify-content-between'>
+        <div className='d-flex justify-content-between my-4'>
           <div>
-            <span className='d-flex align-items-center justify-content-around weather-card-image-tmp'>
+            <span className='d-flex align-items-center justify-content-around weather-card-image-tmp me-4'>
               <img
                 src={current?.condition?.icon}
                 alt='weather Img'
@@ -23,17 +23,23 @@ const WeatherCard = ({ weatherData }) => {
               </span>
             </span>
           </div>
-          <div className='d-flex flex-column weather-card-side'>
-            <span>Wind Speed(kmp): {current?.wind_kph} km/ph</span>
-            <span>Wind Speed(mph): {current?.wind_mph} m/ph</span>
-            <span>Temprature (Fahrenheit): {current?.temp_f}°F</span>
+          <div className='d-flex flex-column weather-card-side '>
+            <span className='border-bottom w-100 h-100 text-center '>
+              Humidity: {current?.humidity}%
+            </span>
+            <span className='border-bottom w-100 h-100 text-center '>
+              Wind Speed(kmp): {current?.wind_kph} km/ph
+            </span>
+            <span className=' w-100 h-100 text-center '>
+              Temprature (Fahrenheit): {current?.temp_f}°F
+            </span>
           </div>
         </div>
-        {/* <div>
-          <span>Temprature (Celcius): {current?.temp_c}</span>
-          <span>Temprature (Fahrenheit): {current?.temp_f}</span>
-          <span>Humidity: {current?.humidity}</span>
-        </div> */}
+        <hr></hr>
+        <div className='location-name'>
+          <span>Country: {location.country}</span>
+          <span>City: {location.name}</span>
+        </div>
       </div>
     </div>
   );
